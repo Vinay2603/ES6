@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
-            background-color: black;
-        }
+        
 #parent{
     border:1px solid black;
     display: grid;
@@ -88,7 +86,7 @@ async function searchY2(){
   
   
 try{
-  let res = await fetch(`https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=AIzaSyBO7iaB8UzrLk53kCFI53dO_-Bjl0wa2d4&part=snippet&maxResults=20`)
+  let res = await fetch(`https://www.googleapis.com/youtube/v3/videos?region=DE&chart=mostPopular&key=AIzaSyBO7iaB8UzrLk53kCFI53dO_-Bjl0wa2d4&part=snippet&maxResults=20`)
 
   let data= await res.json()
 
