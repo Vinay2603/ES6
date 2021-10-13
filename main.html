@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: black;
+        }
+#parent{
+    border:1px solid black;
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15%;
+    grid-gap: 5%
+}
+#parent > div{
+    max-width: 100%;
+}
+#mainnavebar{
+   /* border: 1px solid black;*/
+    height: 50px;
+    background-color: #424242;
+
+}
+#seachbtn{
+    color:white;
+    background-color:#616161 ;
+}
+#span{
+    width: 50px;
+    height: 50px;
+   padding: 1%;
+    background-color: violet;
+    border-radius:50%;
+    color: white;
+}
+#N{
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <div id="mainnavebar">
+        <span id="N">YOUTUBE</span>
+         <input type="text" id="searchbox" placeholder="Search" />
+         <button id="seachbtn" onclick="searchY()">search</button>
+         <span id="span">V</span>
+    </div>
+    <div id="parent"></div>
+    <script>
+
+let container = document.getElementById('parent')
+async function searchY(){
+    let video_name = document.getElementById('searchbox').value
+try{
+    let res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?q=${video_name}&type=video&key=AIzaSyBO7iaB8UzrLk53kCFI53dO_-Bjl0wa2d4&maxResults=20`)
+
+    let data= await res.json()
+
+    console.log('data:', data.items)
+    appendY(data.items)
+}catch(e){
+    console.log('e:', e)
+}
+}
+
+
+
+
+function appendY(videos){
+
+    videos.forEach(({id:{videoId}})=>{
+         let div= document.createElement('div')
+         div.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+         container.append(div)
+    })
+  
+}
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
