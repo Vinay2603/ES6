@@ -38,6 +38,11 @@
 #N{
     color: white;
 }
+#leftbox{
+    width: 200px;
+    border: 1px solid black;
+    height: 1000px;
+}
     </style>
 </head>
 <body>
@@ -47,7 +52,14 @@
          <button id="seachbtn" onclick="searchY()" >search</button>
          <span id="span">V</span>
     </div>
-    <div id="parent"></div>
+    <div>
+        <!--   <div id="leftbox" >
+        
+    </div>-->
+    
+  
+   </div>
+   <div id="parent"></div>
     <script>
 //var count =0
 let container = document.getElementById('parent')
@@ -87,7 +99,7 @@ async function searchY2(){
   
   
 try{
-  let res = await fetch(`https://www.googleapis.com/youtube/v3/videos?region=DE&chart=mostPopular&key=AIzaSyBO7iaB8UzrLk53kCFI53dO_-Bjl0wa2d4&part=snippet&maxResults=20`)
+  let res = await fetch(`https://www.googleapis.com/youtube/v3/videos?region=DE&chart=mostPopular&key=AIzaSyBLAmZDlu7QuyhfYkjpM8WjRWOy0ljdk6I&part=snippet&maxResults=20`)
 
   let data= await res.json()
 
