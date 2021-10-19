@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a894dfd8d0.js" crossorigin="anonymous"></script>
     <title>Document</title>
+    
     <style>
         
 #parent{
@@ -20,7 +22,7 @@
 #mainnavebar{
    /* border: 1px solid black;*/
     height: 50px;
-    background-color: #424242;
+  /*  background-color: #424242;*/
 
 }
 #seachbtn{
@@ -36,7 +38,7 @@
     color: white;
 }
 #N{
-    color: white;
+   /* color: white;*/
 }
 #leftbox{
     width: 200px;
@@ -46,8 +48,14 @@
     </style>
 </head>
 <body>
+   
+   
     <div id="mainnavebar">
-        <span id="N">YOUTUBE</span>
+        <div>
+        <i class="fas fa-align-justify"></i>
+    </div>
+        <i class="fab fa-youtube"></i>
+         <span id="N">YOUTUBE</span>
          <input type="text" id="searchbox" placeholder="Search" />
          <button id="seachbtn" onclick="searchY()" >search</button>
          <span id="span">V</span>
@@ -60,6 +68,7 @@
   
    </div>
    <div id="parent"></div>
+   
     <script>
 //var count =0
 let container = document.getElementById('parent')
