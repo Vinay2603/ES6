@@ -12,6 +12,16 @@
 input{
     margin-top: 5px;
 }
+#login{
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+    padding: 30px;
+    width: 350px;
+    position: relative;
+    top: 100px;
+    left: 550px;
+    box-shadow: 0 20px 20px 0  rgba(0,0,0, .4);
+}
     </style>
 </head>
 <body>
@@ -22,9 +32,10 @@ input{
             <form onsubmit='Login(event)' id="login-form">
                 <h1>Login</h1>
                 <input type="text" id='user' placeholder="username" />
+                <br/>
                 <input type="password" id='pass' placeholder="password" />
                
-               
+                <br/>
                 <input type="submit" />
               </form>
       
