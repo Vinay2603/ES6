@@ -24,7 +24,7 @@
     height: 50px;
   /*  background-color: #424242;*/
   justify-content: space-between;
-
+ 
 }
 #seachbtn{
     color:white;
@@ -46,6 +46,7 @@
     border: 1px solid black;
     height: 1000px;
     padding-left: 30px;
+    position: fixed;
 }
 #searchbox{
     width:  600px;
@@ -68,19 +69,25 @@
    
    
     <div id="mainnavebar">
-        
-        <i class="fas fa-align-justify"></i>
+        <div>
+           <i class="fas fa-align-justify"></i>
     
-        <i class="fab fa-youtube"></i>
-         <span id="N">YOUTUBE</span>
+           <i class="fab fa-youtube"></i>
+           <span id="N">YOUTUBE</span>
+        </div>
+
+       <div>
          <input type="text" id="searchbox" placeholder="Search" />
          <button id="seachbtn" onclick="searchY()" ><i class="fas fa-search"></i></button>
          <i class="fas fa-microphone"></i>
+      </div> 
+           
+      <div>
             <i class="fas fa-video"></i>
             <i class="fas fa-th"></i>
             <i class="far fa-bell"></i>
             <span id="span">V</span>
-        
+     </div> 
         
     </div>
     <div id="box">
