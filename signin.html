@@ -41,7 +41,7 @@ input{
       
         </div>
     
-    <div id='print'></div>
+
     <script>
 
 
@@ -148,9 +148,6 @@ let p = JSON.parse(localStorage.getItem('userName'))
 console.log(p)
 
 let print = document.getElementById('print')
-let heading = document.createElement('p')
-heading.innerText = p[p.length-1].username
-print.append(heading)
 console.log(p[p.length-1].username[0])
 
 }
