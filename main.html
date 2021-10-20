@@ -8,53 +8,58 @@
     <title>Document</title>
     
     <style>
-        
+     *{
+        background-color: #424242; 
+     }   
 #parent{
-    border:1px solid black;
+    /*border:1px solid black;*/
     display: grid;
     grid-gap: 2%;
     grid-template-columns: 20% 20% 20% 20%;
+    background-color: #212121;
+    color: white;
   
 }
 #parent > div{
     max-width: 100%;
 }
 #mainnavebar{
-    border: 1px solid black;
+    display: flex;
+   /* border: 1px solid black;*/
     height: 50px;
   /*  background-color: #424242;*/
-  justify-content: space-between;
- 
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: #424242;
+    color: white;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, .8);
 }
-#seachbtn{
+#searchbtn{
     color:white;
     background-color:#616161 ;
+    margin-right: 20px;
 }
-#span{
-    width: 50px;
-    height: 50px;
-   padding: 1%;
-    background-color: violet;
-    border-radius:50%;
-    color: white;
-}
+
 #N{
-   /* color: white;*/
+  font-size: 25px;
+  font-weight: 900;
 }
 #leftbox{
     width: 200px;
-    border: 1px solid black;
+  /*  border: 1px solid black;*/
     height: 1000px;
     padding-left: 30px;
-    position: fixed;
+    background-color: #424242;
+    color: white;
 }
 #searchbox{
     width:  600px;
     padding: .5%;
+    background-color: #212121;
+    color: white;
 }
-#searchbtn{
-    padding:5%;
-}
+
 #parent{
     width: 1400px;
     padding-left: 100px;
@@ -63,32 +68,63 @@
 #box{
     display: flex;
 }
+.F{
+    font-size: 25px;
+    margin-right: 20px;
+}
+.G{
+    font-size: 25px;
+}
+.H{
+    font-size: 25px;
+}
+.W{
+    color: red;
+}
+#in1{
+  display: flex;
+  box-sizing: border-box;
+    padding: .8%;
+}
+#in2{
+    box-sizing: border-box;
+    padding: .5%;
+  display: flex;
+}
+#in3{
+  display: flex;
+  box-sizing: border-box;
+    padding: .8%;
+}
+.k{
+    background-color:#616161 ;
+}
     </style>
 </head>
 <body>
    
    
     <div id="mainnavebar">
-        <div>
-           <i class="fas fa-align-justify"></i>
+        <div id="in1">
+           <i class="fas fa-align-justify F"></i>
     
-           <i class="fab fa-youtube"></i>
+           <i class="fab fa-youtube G W"></i>
            <span id="N">YOUTUBE</span>
-        </div>
+        </div> 
 
-       <div>
+       <div id="in2">
          <input type="text" id="searchbox" placeholder="Search" />
-         <button id="seachbtn" onclick="searchY()" ><i class="fas fa-search"></i></button>
-         <i class="fas fa-microphone"></i>
+         <button id="searchbtn" onclick="searchY()" ><i class="fas fa-search F k"></i></button>
+         <i class="fas fa-microphone F"></i>
       </div> 
            
-      <div>
-            <i class="fas fa-video"></i>
-            <i class="fas fa-th"></i>
-            <i class="far fa-bell"></i>
-            <span id="span">V</span>
+      <div id="in3">
+            <i class="fas fa-video F"></i>
+            <i class="fas fa-th F"></i>
+            <i class="far fa-bell H"></i>
+            
      </div> 
-        
+       
     </div>
     <div id="box">
            <div id="leftbox" >
