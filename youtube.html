@@ -106,6 +106,15 @@
 .k{
     background-color:#616161 ;
 }
+.L{
+    color: white;
+    margin-left: 20px;
+}
+#print{
+    color: white;
+    font:35px;
+    font-weight: 900;
+}
     </style>
 </head>
 <body>
@@ -127,9 +136,10 @@
            
       <div id="in3">
             <i class="fas fa-video F"></i>
-            <i class="fas fa-th F"></i>
+            <a href='signin.html'><i class="fas fa-th F L"></i></a>
             <i class="far fa-bell H"></i>
-            
+            <a href='signup.html'><i class="fas fa-user-plus F L"></i></a>
+            <div id='print'></div>
      </div> 
        
     </div>
@@ -235,6 +245,31 @@ videos.forEach(({id})=>{
 
 
 
+function append(){
+   
+
+
+
+
+
+let p = JSON.parse(localStorage.getItem('userName'))   
+console.log(p)
+
+let print = document.getElementById('print')
+let heading = document.createElement('p')
+
+if(p[p.length-1].message ==  "Invalid token for user"){
+         return
+     
+}else if(p[p.length-1].username !== 'undefined'){
+    heading.innerText = p[p.length-1].username
+    print.append(heading)
+    console.log(p[p.length-1].username[0])
+}
+
+}
+
+append()
 
     </script>
 
