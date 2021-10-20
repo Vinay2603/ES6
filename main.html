@@ -20,9 +20,10 @@
     max-width: 100%;
 }
 #mainnavebar{
-   /* border: 1px solid black;*/
+    border: 1px solid black;
     height: 50px;
   /*  background-color: #424242;*/
+  justify-content: space-between;
 
 }
 #seachbtn{
@@ -44,6 +45,22 @@
     width: 200px;
     border: 1px solid black;
     height: 1000px;
+    padding-left: 30px;
+}
+#searchbox{
+    width:  600px;
+    padding: .5%;
+}
+#searchbtn{
+    padding:5%;
+}
+#parent{
+    width: 1400px;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+#box{
+    display: flex;
 }
     </style>
 </head>
@@ -51,23 +68,52 @@
    
    
     <div id="mainnavebar">
-        <div>
+        
         <i class="fas fa-align-justify"></i>
-    </div>
+    
         <i class="fab fa-youtube"></i>
          <span id="N">YOUTUBE</span>
          <input type="text" id="searchbox" placeholder="Search" />
-         <button id="seachbtn" onclick="searchY()" >search</button>
-         <span id="span">V</span>
-    </div>
-    <div>
-           <div id="leftbox" >
+         <button id="seachbtn" onclick="searchY()" ><i class="fas fa-search"></i></button>
+         <i class="fas fa-microphone"></i>
+            <i class="fas fa-video"></i>
+            <i class="fas fa-th"></i>
+            <i class="far fa-bell"></i>
+            <span id="span">V</span>
+        
         
     </div>
+    <div id="box">
+           <div id="leftbox" >
+            
+              
+                <h3><i class="fas fa-home"></i> &nbsp; &nbsp; &nbsp;Home</h3>
+                 
+                 <h3><i class="far fa-compass"></i>&nbsp; &nbsp; &nbsp;Explore</h3>
+        
+                
+                 <h3> <i class="fas fa-layer-group"></i>&nbsp; &nbsp; &nbsp;Subscriptions</h3>
+                 <br/>
+                
+                 <h3>  <i class="fab fa-youtube-square"></i>&nbsp; &nbsp; &nbsp;Libray</h3>
+                 
+                 <h3><i class="fas fa-history"></i>&nbsp; &nbsp; &nbsp;History</h3>
+                
+                 <h3> <i class="fas fa-caret-square-right"></i>&nbsp; &nbsp; &nbsp;Your videos</h3>
+                 
+                 <h3><i class="far fa-clock"></i>&nbsp; &nbsp; &nbsp;Watch later</h3>
+                
+                 <h3> <i class="fas fa-layer-group"></i>&nbsp; &nbsp; &nbsp;qwerty</h3>
+                
+                 <h3> <i class="fas fa-chevron-down"></i>&nbsp; &nbsp; &nbsp;Show more</h3>
+                 <br/>
+                 <h3>SUBSCRIPTIONS</h3>
+
+          </div>
     
-  
+          <div id="parent"></div>
+   
    </div>
-   <div id="parent"></div>
    
     <script>
 //var count =0
@@ -131,7 +177,7 @@ function appendY2(videos){
 
 videos.forEach(({id})=>{
      let div= document.createElement('div')
-     div.innerHTML = `<iframe width="150" height="215" src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+     div.innerHTML = `<iframe width="250" height="215" src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
      container.append(div)
 })
 
